@@ -96,6 +96,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+
 .popup-overlay.active {
     display: flex;
 }
@@ -103,3 +104,107 @@ section {
 .popup-overlay.close {
     cursor: pointer;
 }
+
+/* Articles inactifs (gris clair) */
+#cart-items li.inactive {
+    color: lightgray;
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Articles actifs (noir) */
+#cart-items li:not(.inactive) {
+    color: black;
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* Style des éléments dans le panier */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.9rem; /* Réduction de la taille de police */
+    gap: 10px; /* Espacement entre les éléments */
+    border-bottom: 1px solid #ccc;
+}
+
+/* Espacement supplémentaire pour le nom, quantité et prix */
+#cart-items .item-name {
+    flex: 2;
+}
+
+#cart-items .quantity {
+    flex: 1;
+    text-align: center;
+}
+
+#cart-items .price {
+    flex: 1;
+    text-align: right;
+}
+
+/* Boutons pour augmenter ou diminuer la quantité */
+button.decrease, button.increase {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button.decrease:hover, button.increase:hover {
+    background-color: #6a1b9a;
+}
+
+/* Panier (sidebar) */
+#cart-sidebar {
+    position: fixed;
+    top: 6rem;
+    left: 1rem;
+    width: 300px;
+    background: linear-gradient(135deg, #fff8fc, #f7f1ff);
+    border: 1px solid #ba68c8;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-bottom: 1rem;
+}
+
+/* Masquer les articles */
+.hidden {
+    display: none;
+}
+
+
+button#toggle-cart {
+    background: #4a148c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#toggle-cart:hover {
+    background: #6a1b9a;
+}
+
+
