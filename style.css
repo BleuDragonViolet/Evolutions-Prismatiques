@@ -208,3 +208,48 @@ button#toggle-cart:hover {
 }
 
 
+/* Styles pour les écrans de téléphone */
+@media (max-width: 768px) {
+    /* Général : ajuster les marges et la taille du texte */
+    body {
+        padding: 0.5rem;
+        font-size: 14px; /* Texte un peu plus petit */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Réduire la taille du titre */
+    }
+
+    /* Timeline : affichage plus compact */
+    .timeline li {
+        flex-direction: column; /* Réorganiser en colonne */
+        align-items: flex-start; /* Aligner les éléments à gauche */
+        gap: 0.5rem; /* Réduire l'espace entre les éléments */
+    }
+
+    .timeline img {
+        width: 100%; /* S'adapte à la largeur disponible */
+        max-width: 150px; /* Limite la taille des images */
+        height: auto;
+    }
+
+    /* Section principale */
+    section {
+        padding: 1rem; /* Réduire les marges */
+        max-width: 95%; /* S'adapte à l'écran */
+    }
+
+    /* Panier : ajustement pour petits écrans */
+    #cart-sidebar {
+        width: 90%; /* Réduit la largeur */
+        left: 5%; /* Centré */
+        top: 1rem; /* Ajuste la position */
+    }
+
+    /* Boutons plus petits pour mobile */
+    button {
+        font-size: 0.8rem; /* Réduit la taille des boutons */
+        padding: 0.4rem 0.8rem; /* Ajuste les marges internes */
+    }
+}
+
